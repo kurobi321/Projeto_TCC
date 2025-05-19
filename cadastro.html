@@ -1,43 +1,53 @@
 <!DOCTYPE html>
 
-<html lang="PT-BR">
+<html>
 
     <head>
-        <meta charset="utf-8">
         <title>Cadastro</title>
-        <link rel="stylesheet" href="assest/css/global.css">
+        <link rel="stylesheet" href="assest/css/cadastro.css">
+        <script src="assest/js/register.js"></script>
+        <script src="assest/js/validateEmail.js"></script>
     </head>
 
-    <body class="container">
-        <div id="logo_form">
-            <img src="assest/img/logo.png" alt="logo">
-        </div>
-        
+    <body>
+        <header>
+            <div id="cadastro_logo">
+                <img src="assest/img/logo.png" alt="Logo">
+            </div>
+        </header>
+
         <form>
             <div class="form-field">
-                <div><label>E-mail</label></div>
-                <input type="email" placeholder="Digite seu email" />
+                <div><label>Email</label></div>
+                <input type="email" name="email" id="email" placeholder="Digite seu email" onchange="onChangeEmail()" />
+                <div class="error" id="email-required-error">e-mail é obrigatorio</div>
+                <div class="error" id="email-invalid-error">e-mail invalido</div>
             </div>
 
             <div class="form-field">
                 <div><label>Senha</label></div>
-                <input type="password" placeholder="Digite sua senha" />
+                <input type="password" name="password" id="password" placeholder="Digite sua senha" onchange="onChangePassword()" />
+                <div class="error" id="password-required-error">senha é obrigatoria</div>
+                <div class="error" id="password-min-length-error">senha deve ter pelo meno 6 caracteres</div>
             </div>
 
             <div class="form-field">
                 <div><label>Confirmar senha</label></div>
-                <input type="password" placeholder="Digite senha novamente" />
+                <input type="password" name="password" id="confirmPassword" placeholder="Confirme sua senha" onchange="onChangeConfirmPassword()" />
+                <div class="error" id="password-doenst-match-error">senha e confirmar senha devem ser iguais</div>
             </div>
 
             <div>
-                <button type="button" class="solid">Registrar</button>
+                <button type="button" class="solid" disabled="true" id="register-button">Registrar</button>
             </div>
-        
+
             <div>
-                <button type="button" class="clear">Login</button>    
+                <button type="button" class="clear">Login</button>
             </div>
+       
+            
         </form>
+
     </body>
 
 </html>
-

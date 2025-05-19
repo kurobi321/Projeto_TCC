@@ -1,0 +1,61 @@
+/*Formatacao da pagina de cadastro
+E uso global*/
+
+body {
+    background: aqua;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    height: 100vh;
+    margin: 0;
+}
+header {
+    height: 200px;
+    top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    margin-left: 90px;
+    height: 200px;
+    width: 300px;
+}
+
+form {
+    margin-left: -280px;
+    margin-top: 250px;
+    width: 300px;
+}
+
+input, button {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 220px;
+    border: none;
+}
+
+button {
+    color: white;
+    font-weight: bold;
+    background-color: rgb(4, 158, 247);
+    cursor: pointer;
+
+}
+button:active {
+    opacity: 0.8;
+}
+
+button[disabled] {
+    opacity: 0.8;
+}
+
+.error {
+    color: white;
+    background-color: red;
+    display: none;
+}
+
+
+
+
