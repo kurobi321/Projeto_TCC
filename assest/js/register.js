@@ -36,6 +36,22 @@ function toggleRegisterButtonDisable() {
     form.registerButtor().disabled = !isFormvalid();
 }
 
+//essa functio retorna um promisser, entao usar a function reduzida .then (() =>...)
+function register() {
+    const email = form.email().value;
+    const password = form.password().value;
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then(() => {
+        window.location.href = "../../login.html";
+    }).catch(error => {
+        alert("Usuario ja cadastrado");
+    })
+}
+
+function getErrorMessage(){
+    return;
+}
+
 function isFormvalid() {
     const email = form.email().value;
 

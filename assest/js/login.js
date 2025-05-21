@@ -1,6 +1,14 @@
 //Function de validade de email
 //Javascript e formado basicamente por functions
 
+//metodo que verifica com frequencia a conexao com o sistema de login
+firebase.auth().onAuthStateChanged(function(user) {
+    if(user) {
+        window.location.href = "index.html";
+    }
+})
+
+
 //Function que que chama as outras funcoes e desabilita os BT
 function onChangeEmail() {
     
@@ -26,8 +34,7 @@ function login() {
     });
 }
 function register() {
-    showLoading();
-    //window.location.href = "cadastro.html"; 
+    window.location.href = "cadastro.html"; 
 }
 function getErrorMessage(error) {
     if(error.code == "auth/invalid-credential") {
@@ -96,5 +103,3 @@ const form = {
     passwordRequiredError: () => document.getElementById("password-required-error"),
     recoverPasswordButton: () => document.getElementById("recover-password-button"),
 }
-
-
