@@ -1,0 +1,137 @@
+/*meu primeiro arquivo css
+
+seletor{
+    propriedade1: valor1;
+    propriedade2: valor2;
+}
+o seletor *, significa toda a pagina
+
+p{
+    color: red;
+    font-size: 40px;
+    font-family: asdf, arial, "Times new roman";
+}
+para chamar um ID coloca-se # antes do ID
+quando usar a propriedade float, usar clear: both, na tag abaixo
+
+*/
+
+/*Config fundo*/
+body {
+    background: white;
+}
+
+/*Config Cabecalho*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, arial;
+    text-decoration: none;
+}
+.cabecalho {
+    background: yellow;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+img {
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+}
+.whats {
+    margin-left: 50px;
+}
+
+.cabecalho .atendimento {
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 5px;
+
+}
+
+.email {
+    font-size: 14px;
+    font-weight: bold;
+    justify-self: end;
+    margin-right: auto;
+    margin-left: 50px;
+}
+
+button {
+    margin-right: 50px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+/*Config Barra menu*/
+
+.barra_menu {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    background: aqua;
+    justify-content: space-evenly;
+    align-items: left;
+}
+
+#logo {
+    width: 160px;
+    height: 140px;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav li a:hover {
+    background-color: rgb(252, 252, 252);
+}
+
+.menu {
+    list-style: none;
+    float: left;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+.menu li {
+    position: relative;
+    float: left;
+    width: 160px;
+}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    width: auto;
+    padding: 2px;
+}
+
+.menu li ul {
+    position: absolute;
+    display: none;
+    padding: 5px;
+}
+.menu li:hover ul, .menu li .over ul{display: block;}
+
+.menu li ul li {
+    display: block;
+    width: 200px;
+}
+
+/*Config do corpo */
+.principal {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#fundo {
+    width: 800px;
+    height: 500px;
+}
+
+footer {
+    background: brown;
+}

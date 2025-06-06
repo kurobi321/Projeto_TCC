@@ -42,7 +42,7 @@ function register() {
     const password = form.password().value;
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(() => {
-        window.location.href = "../../login.html";
+        window.location.href = "../../home.html";
     }).catch(error => {
         alert("Usuario ja cadastrado");
     })

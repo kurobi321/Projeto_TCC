@@ -1,98 +1,56 @@
-<!--chamando css-->
-<!--trabalhando com div e container-->
+<!doctype html>
 
-<!DOCTYPE html>
-<html lang="PT-BR">
-
+<html>
+<!--no script do firebase: refere-se ao app o outro, refere-se a autenticacao-->
 <head>
-	<meta charset="utf-8">
-	<title>Teste CSS</title>
-	<link rel="stylesheet" type="text/css" href="assest/css/index.css">
+    <title>Tela de Login - inclusão</title>
+    <link rel="stylesheet" href="assest/css/index.css">
 
+    <script src="assest/js/login.js"></script>
+    <script src="assest/js/validateEmail.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-auth-compat.js"></script>
+    <script src="assest/js/firebase_init.js"></script>
+    
 </head>
 
 <body>
-<!--criar um container-->
-	<header>
-		<div id="header">
+    <header>
+        <div id="login_logo">
+            <img src="assest/img/logo.png" alt="logo">
+        </div>
+    </header>
+    
+    <form>
+        <div class="form-field">
+            <div><label>Email</label></div>
+            <input type="email" name="email" id="email" placeholder="Digite seu email" onchange="onChangeEmail()"/>
+            <div class="error" id="email-required-error">Email é obrigatório</div>
+            <div class="error" id="email-invalid-error">Email inválido</div>
+        </div>
+        
+        <div class="form-field">
+            <div><label>Senha</label></div>
+            <input type="password" name="password" id="password" placeholder="Digite sua senha" onchange="onChangePassword()"/>
+            <div class="error" id="password-required-error">Senha é obrigatória</div>
+        </div>
 
-			<div class="container_header">
-				<div id="logo">
-					<img src="assest/img/logo.png">
-				</div>
+        <div>
+            <button type="button" class="clear" id="recover-password-button" onclick="recoverPassword()" disabled="true">Recuperar senha</button>
+        </div>
 
-				<nav>
-					<ul class="menu">
-						<li><a href="#">Quem somos</a>
-							<ul>
-								<li><a href="nossaHistoria.html">Nossa história</a></li>
-								<li><a href="nossoObjetivo.html">Nosso objetivo</a></li>
-							</ul>
-						</li>
+        <div>
+            <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
+        </div>
 
-						<li><a href="#">Games</a>
-							<ul>
-								<li><a href="#">Pre-escola</a></li>
-								<li><a href="#">Fundamental I</a></li>
-								<li><a href="#">Fundamental II</a></li>
-							</ul>
-						</li>
+        <div>
+            <button type="button" class="outline" onclick="register()">Registrar</button>
+        </div>
 
-						<li><a href="#">Pré-escola</a>
-							<ul>
-								<li><a href="#">Cuidados basicos</a></li>
-								<li><a href="#">Desfralde</a></li>
-								<li><a href="#">Alfabetização</a></li>
-								<li><a href="#">Lógica</a></li>
-								<li><a href="#">Pintura</a></li>
-							</ul>
-						</li>
+    </form>
 
-					  	<li><a href="#">Fundamental I</a>
-						 	<ul>
-							  	<li><a href="#">1º ano</a></li>
-							  	<li><a href="#">2º ano</a></li>
-							  	<li><a href="#">3º ano</a></li>
-								<li><a href="#">4º ano</a></li>
-								<li><a href="#">5º ano</a></li>
-						   	</ul>
-						</li>
-
-						<li><a href="#">Fundamental II</a>
-							<ul>
-								<li><a href="#">6º ano</a></li>
-								<li><a href="#">7º ano</a></li>
-								<li><a href="#">8º ano</a></li>
-								<li><a href="#">9º ano</a></li>
-							</ul>
-						</li>
-
-						<li><a href="#">Informática</a>
-							<ul>
-								<li><a href="#">Digitação</a></li>
-								<li><a href="#">O computador</a></li>
-								<li><a href="#">Word</a></li>
-								<li><a href="#">Excel</a></li>
-								<li><a href="#">Internet</a></li>
-							</ul>
-						</li>
-					</ul>
-				</nav>
-
-			</div>
-		</div>
-	</header>
-
-	<div id="div_principal">
-		<div class="container">
-			<h2>Bem vindo ao um novo modo de ensino</h2>
-			<p>A nossa missão é ajudar na inclusão de aprendizagem, tanto no ensino de informática, quanto no ensino de conteudo escolar. Portanto sua colaboração na divulgação desse trabalho, ajudará mais pessoas na inclusão. </p>
-		</div>
-	</div>
-	
-	<footer>
-		Projeto TCC - Engenharia da computação
-	</footer>
 </body>
+
 
 </html>

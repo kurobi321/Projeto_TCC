@@ -2,9 +2,8 @@
 //Javascript e formado basicamente por functions
 
 //metodo que verifica com frequencia a conexao com o sistema de login
-firebase.auth().onAuthStateChanged(function(user) {
-    window.location.href = "index.html";
-})
+
+
 //Function que que chama as outras funcoes e desabilita os BT
 function onChangeEmail() {
     
@@ -24,7 +23,7 @@ function login() {
     firebase.auth().signInWithEmailAndPassword(
         form.email().value, form.password().value
     ).then(response => {
-        window.location.href = "index.html";
+        window.location.href = "home.html";
     }).catch(error => {
         alert(getErrorMessage(error));
     });

@@ -1,131 +1,86 @@
-/*meu primeiro arquivo css
+/*Criar um conteiner do tipo flexbox
+escolhe o elemento que vai ser flexbox e atribui a propriedade flex
+nesse caso, escolhemos o body */
 
-seletor{
-	propriedade1: valor1;
-	propriedade2: valor2;
-}
-o seletor *, significa toda a pagina
-
-p{
-	color: red;
-	font-size: 40px;
-	font-family: asdf, arial, "Times new roman";
-}
-para chamar um ID coloca-se # antes do ID
-quando usar a propriedade float, usar clear: both, na tag abaixo
-
-*/
-
-body{
-	background-color: black;
-}
-
-*{
-	margin: 0;
-	padding: 0;
-	font-family: Helvetica, arial;
+body {
+    background: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 header{
-	background-color: #35b8b0;
-	height: 155px;
-	padding: 5px;
+    position: relative;
+    top: -220px;
+    align-items: center;
+    justify-content: center;
 }
 
-.container_header{
-	display: flex;
-	align-items: left;
-	margin: auto;
-}
-
-nav li a:hover{
-	background-color: blue;
-}
-
-/* Menu dropdown*/
-.menu{
-	margin-left: 100px;
-	margin-top: 10px;
-	float: left;
-	list-style: none;
-	
-}
-
-.menu li{
-	position: relative;
-	float: left;
-	width: auto;
-	width: 160px;
-}
-
-.menu li a{
-	color: white;
-	text-decoration: none;
-	width: auto;
-	padding: 2px;
-	display: inline-block;
-}
-
-.menu li ul{
-	position: absolute;
-	padding: 5px;
-	left: 0;
-	display: none;
-}
-
-.menu li:hover ul, .menu li.over ul{display:block;}
-
-.menu li ul li{
-	border: 1px, solid;
-	display: block;
-	width: 150px;
-}
-
-/* a aplicar uma propriedade a todos os elementos do menu*/
-
-
-/*hover atribuir um fundo nos elementos
-
-#menu_hor a:hover{
-	background-color: yellow;
-}
-*/
-
-footer{
-	clear: both;
-	background-color: #35b8b0;
-	height: 20px;
-	text-align: center;
-	padding: 6px;
-}
-
-h2{
-	color: darkred;
-	text-align: center;
-	padding: 0 0 20px 0;
-	text-shadow: 1px 1px 1px #111111;
-}
-
-/*instanciar uma class*/
-.container{
-	width: auto;
-	align-items: left;
-	margin: auto;
-}
-#div_principal{
-	clear: both;
-	background-color: white;
-	background-image: url('../img/img_fundo.png');
-	background-size: 100%;
-	min-height: 480px;
-	padding: 20px;
+#login_logo{
+    float: top;
+    margin-left: 100px;
 }
 
 img{
-	padding: 2px;
-	height: 150px;
-	width: 250px;
+    margin-left: 50%;
+    height: 100px;
+    width: 150px;
 }
-#logo{
-	float: left;
+
+form {
+    margin-left: -90px;
+    width: 300px;
+}
+
+input {
+    border: none;
+}
+
+input, button {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 220px;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+button[disabled] {
+    opacity: 0.8;
+}
+ 
+
+.clear {
+    background: transparent;
+    border: none;
+    color: black;
+    font-weight: bold;
+}
+
+.solid {
+    background: white;
+    border: none;
+    color: black;
+    font-weight: bold;
+    border: 1px solid white;
+}
+
+.outline {
+    background: white;
+    color: black;
+    border: 1px solid white;
+    font-weight: bold;
+}
+
+.error {
+    color: white;
+    background-color: red;
+    display: none;
 }
